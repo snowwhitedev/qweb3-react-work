@@ -1,5 +1,5 @@
 {
-  "name": "web3-react-example",
+  "name": "qweb3-react-dev-example",
   "scripts": {
     "start": "next",
     "build": "next build && next export"
@@ -7,8 +7,8 @@
   "dependencies": {
     "@ethersproject/providers": "^5.1.2",
     "@ethersproject/units": "^5.1.0",
-    "@web3-react/core": "latest",
-    "@web3-react/injected-connector": "latest",
+    "@qweb3-react-dev/core": "latest",
+    "@qweb3-react-dev/injected-connector": "latest",
     "next": "^12.0.8",
     "react": ">=16.8",
     "react-dom": ">=16.8",

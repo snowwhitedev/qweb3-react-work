@@ -293,44 +293,44 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.2.0.tgz#9f66664f9122ca555b96a5f2fc6e2af677bf801b"
   integrity sha512-OI14ozFLThEV3ey6jE47zrzSTV/6eIMsvbwozo+XfdWqOPwQ7X00YkRx4GVMKMC0rM44oGS2gmwMKYpe4EblnA==
 
+"@qweb3-react-dev/abstract-connector@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@qweb3-react-dev/abstract-connector/-/abstract-connector-0.0.4.tgz#a8ac403033e7f2a91561f2184a920cb5a809aa8e"
+  integrity sha512-z2E3gsxEsobob+VukunGsevGD66Zh0YDfrWxTlEofz0OtGDluG5p7FF2ZyrWoH1Xk53v2GN1c/sVKcVaoF22cQ==
+  dependencies:
+    "@qweb3-react-dev/types" "^0.0.4"
+
+"@qweb3-react-dev/core@latest":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@qweb3-react-dev/core/-/core-0.0.4.tgz#9844e6902d014f4977b75820a63883ffaf4a6210"
+  integrity sha512-mqUJMBLmKO+6WJI2YrO339nWBS9YBUa2ufRy3fnXcS7LYP0HtuWTEB1qUusLWpkpLeiuOsBOlOxG6REmZxNOaA==
+  dependencies:
+    "@ethersproject/keccak256" "^5.0.0-beta.130"
+    "@qweb3-react-dev/abstract-connector" "^0.0.4"
+    "@qweb3-react-dev/types" "^0.0.4"
+    tiny-invariant "^1.0.6"
+    tiny-warning "^1.0.3"
+
+"@qweb3-react-dev/injected-connector@latest":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@qweb3-react-dev/injected-connector/-/injected-connector-0.0.4.tgz#08c37b5202f8ddbb8e7b6888069ed8309db2214e"
+  integrity sha512-iNvOITff0KDSRv6OPTFRfAtabjN5mJg5WrXJFwAaci3BSTrS/30Ao7+fEYOM5X6RFDkXUxCSRdHbaAMEe8i6Eg==
+  dependencies:
+    "@qweb3-react-dev/abstract-connector" "^0.0.4"
+    "@qweb3-react-dev/types" "^0.0.4"
+    tiny-warning "^1.0.3"
+
+"@qweb3-react-dev/types@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@qweb3-react-dev/types/-/types-0.0.4.tgz#6fbacbf4c21c1f8f6c0122ef5bd17b032f965135"
+  integrity sha512-hzq0sO+mytGo9BQUwLeKzo3hbJi/F+L1pH8hn/IqrRDd1955Du4125QQrSvW/jCUBr6fk3FASae83jI7hWlDeg==
+
 "@swc/helpers@0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.2.tgz#ed1f6997ffbc22396665d9ba74e2a5c0a2d782f8"
   integrity sha512-556Az0VX7WR6UdoTn4htt/l3zPQ7bsQWK+HqdG4swV7beUCxo/BqmvbOpUkTIm/9ih86LIf1qsUnywNL3obGHw==
   dependencies:
     tslib "^2.4.0"
-
-"@web3-react/abstract-connector@^6.0.7":
-  version "6.0.7"
-  resolved "https://registry.yarnpkg.com/@web3-react/abstract-connector/-/abstract-connector-6.0.7.tgz#401b3c045f1e0fab04256311be49d5144e9badc6"
-  integrity sha512-RhQasA4Ox8CxUC0OENc1AJJm8UTybu/oOCM61Zjg6y0iF7Z0sqv1Ai1VdhC33hrQpA8qSBgoXN9PaP8jKmtdqg==
-  dependencies:
-    "@web3-react/types" "^6.0.7"
-
-"@web3-react/core@latest":
-  version "6.1.9"
-  resolved "https://registry.yarnpkg.com/@web3-react/core/-/core-6.1.9.tgz#5f5daa0545a8ea07770a699580ced552583afc97"
-  integrity sha512-P877DslsbAkWIlMANpWiK7pCvNwlz0kJC0EGckuVh0wlA23J4UnFxq6xyOaxkxaDCu14rA/tAO0NbwjcXTQgSA==
-  dependencies:
-    "@ethersproject/keccak256" "^5.0.0-beta.130"
-    "@web3-react/abstract-connector" "^6.0.7"
-    "@web3-react/types" "^6.0.7"
-    tiny-invariant "^1.0.6"
-    tiny-warning "^1.0.3"
-
-"@web3-react/injected-connector@latest":
-  version "6.0.7"
-  resolved "https://registry.yarnpkg.com/@web3-react/injected-connector/-/injected-connector-6.0.7.tgz#1e0be23f51fa07fe6547fe986768a46b74c3a426"
-  integrity sha512-Y7aJSz6pg+MWKtvdyuqyy6LWuH+4Tqtph1LWfiyVms9II9ar/9B/de4R8wh4wjg91wmHkU+D75yP09E/Soh2RA==
-  dependencies:
-    "@web3-react/abstract-connector" "^6.0.7"
-    "@web3-react/types" "^6.0.7"
-    tiny-warning "^1.0.3"
-
-"@web3-react/types@^6.0.7":
-  version "6.0.7"
-  resolved "https://registry.yarnpkg.com/@web3-react/types/-/types-6.0.7.tgz#34a6204224467eedc6123abaf55fbb6baeb2809f"
-  integrity sha512-ofGmfDhxmNT1/P/MgVa8IKSkCStFiyvXe+U5tyZurKdrtTDFU+wJ/LxClPDtFerWpczNFPUSrKcuhfPX1sI6+A==
 
 bech32@1.1.4:
   version "1.1.4"
