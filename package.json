@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "web3-react",
+  "name": "qweb3-react-dev",
   "description": "A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps",
   "keywords": [
     "react",
@@ -23,10 +23,10 @@
     "authereum",
     "magic"
   ],
-  "author": "Noah Zinsmeister <noahwz@gmail.com>",
+  "author": "<snowwhite91924@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/NoahZinsmeister/web3-react.git"
+    "url": "git://github.com/snowwhitedev/qweb3-react-work.git"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
