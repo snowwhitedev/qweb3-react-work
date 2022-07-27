@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple, maximally extensible, dependency minimized framework for building modern Ethereum dApps",
   "keywords": [
     "react",
@@ -35,8 +35,8 @@
     "lint": "tsdx lint src"
   },
   "dependencies": {
-    "@qweb3-react-dev/abstract-connector": "^0.0.3",
-    "@qweb3-react-dev/types": "^0.0.3",
+    "@qweb3-react-dev/abstract-connector": "^0.0.4",
+    "@qweb3-react-dev/types": "^0.0.4",
     "tiny-warning": "^1.0.3"
   },
   "license": "GPL-3.0-or-later"
