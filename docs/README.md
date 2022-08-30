@@ -1,4 +1,4 @@
-# `web3-react` Documentation
+# `qweb3-react-dev` Documentation
 
 - [Overview](#overview)
 - [Install](#install)
