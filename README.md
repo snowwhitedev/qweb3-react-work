@@ -14,14 +14,9 @@ _A simple, maximally extensible, dependency minimized framework for building mod
 | 🔌 **Connectors**                     |
 | _Browser Extension/dApp Browser_      |
 | `@qweb3-react-dev/injected-connector`      | [![npm version](https://img.shields.io/npm/v/@web3-react/injected-connector/latest.svg)](https://www.npmjs.com/package/@qweb3-react-dev/injected-connector/v/latest)           | [![minzip](https://img.shields.io/bundlephobia/minzip/@web3-react/injected-connector/latest.svg)](https://bundlephobia.com/result?p=@qweb3-react-dev/injected-connector@latest)           | [Injected](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1193.md) Connector |
-
 | 🐉 **Low-Level**                      |
 | `@qweb3-react-dev/abstract-connector`      | [![npm version](https://img.shields.io/npm/v/@web3-react/abstract-connector/latest.svg)](https://www.npmjs.com/package/@qweb3-react-dev/abstract-connector/v/latest)           | [![minzip](https://img.shields.io/bundlephobia/minzip/@web3-react/abstract-connector/latest.svg)](https://bundlephobia.com/result?p=@qweb3-react-dev/abstract-connector@latest)           | Shared Connector Class                                                              |
 | `@qweb3-react/types`                   | [![npm version](https://img.shields.io/npm/v/@web3-react/types/latest.svg)](https://www.npmjs.com/package/@qweb3-react-dev/types/v/latest)                                     | [![minzip](https://img.shields.io/bundlephobia/minzip/@web3-react/types/latest.svg)](https://bundlephobia.com/result?p=@qweb3-react-dev/types@latest)                                     | Shared [TypeScript](https://www.typescriptlang.org/) Types                          |
-
-## Quickstart
-
-[![Edit web3-react-example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/NoahZinsmeister/web3-react/tree/v6/example?fontsize=14&hidenavigation=1&theme=dark)
 
 ## [Documentation](docs)
 
