@@ -4,12 +4,14 @@ import {
   NoEthereumProviderError,
   UserRejectedRequestError as UserRejectedRequestErrorInjected
 } from '@qweb3-react-dev/injected-connector'
-import { Web3Provider } from '@ethersproject/providers'
+import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { formatEther } from '@ethersproject/units'
 
 import { useEagerConnect, useInactiveListener } from '../hooks'
 import { injected } from '../connectors'
 import { Spinner } from '../components/Spinner'
+import { CONTRACT_ABIS, TEST_NFT_ADDRESS } from '../constant'
+import { Contract } from '@ethersproject/contracts';
 
 enum ConnectorNames {
   Injected = 'Injected'
@@ -209,6 +211,37 @@ function App() {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector)
 
+  // account is not optional
+  const getSigner = (library: Web3Provider): JsonRpcSigner => {
+    return library.getSigner(account).connectUnchecked()
+  }
+  
+  // account is optional
+  const getProviderOrSigner = (library: Web3Provider): Web3Provider | JsonRpcSigner => {
+    return account ? getSigner(library) : library
+  }
+
+
+  const onHandleTestNFT = async () => {
+    const contractAddress = TEST_NFT_ADDRESS;
+    const contractAbi = CONTRACT_ABIS.ERC721_TEST_ABI;
+
+    // const nftContract = new Contract(contractAddress, contractAbi, getProviderOrSigner(library))
+    const nftContract = new Contract(contractAddress, contractAbi, library.getSigner(account).connectUnchecked());
+
+
+    const txHash = await nftContract.mint(account, 3); // 3 should be changed
+    // succeeded transaction hash => https://testnet.qtum.info/tx/563111a96ba2bbdc634e7f978d5bc7140cd31758027ff3c7dd8f9f45fe335cab
+    console.log('tx Hash ==>', txHash.toString());
+
+    const receipt = await txHash.wait();
+
+    console.log('receipt ==>', receipt);
+    // const nftContract = new Contract(contractAddress, contractAbi, library.getSigner(account).connectUnchecked())
+
+
+  }
+
   return (
     <>
       <Header />
@@ -305,26 +338,29 @@ function App() {
         }}
       >
         {!!(library && account) && (
-          <button
-            style={{
-              height: '3rem',
-              borderRadius: '1rem',
-              cursor: 'pointer'
-            }}
-            onClick={() => {
-              library
-                .getSigner(account)
-                .signMessage('👋')
-                .then((signature: any) => {
-                  window.alert(`Success!\n\n${signature}`)
-                })
-                .catch((error: any) => {
-                  window.alert('Failure!' + (error && error.message ? `\n\n${error.message}` : ''))
-                })
-            }}
-          >
-            Sign Message
-          </button>
+          <>
+            <button
+              style={{
+                height: '3rem',
+                borderRadius: '1rem',
+                cursor: 'pointer'
+              }}
+              onClick={() => {
+                library
+                  .getSigner(account)
+                  .signMessage('👋')
+                  .then((signature: any) => {
+                    window.alert(`Success!\n\n${signature}`)
+                  })
+                  .catch((error: any) => {
+                    window.alert('Failure!' + (error && error.message ? `\n\n${error.message}` : ''))
+                  })
+              }}
+            >
+              Sign Message
+            </button>
+            <button onClick={onHandleTestNFT}>Mint TestNFT</button>
+          </>
         )}
       </div>
     </>
